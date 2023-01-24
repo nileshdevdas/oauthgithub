@@ -1,0 +1,20 @@
+spring:
+  security:
+    oauth2:
+      client:
+          registration:
+            github:
+              client-id: 90549006f943380fd912
+              client-name: sampapp
+              client-secret: 20ddf64ec9f915947ed40ceb2ccf8f2ce004395c
+              authorization-grant-type: authorization_code
+              redirect-uri: http://localhost:8080/login/oauth2/code/github
+              scope:
+              - email
+              - read_user
+          provider:
+            github:
+              authorization-uri: https://github.com/login/oauth/authorize
+              token-uri: https://github.com/login/oauth/access_token
+              user-info-uri: https://api.github.com/user
+              jwk-set-uri: https://www.github.com/oauth/discovery/keys
